@@ -19,7 +19,7 @@ public class ImageTester extends Component {
 	
 	public ImageTester() {
 		try {
-			img = ImageIO.read(new File("example file name")); //insert real file path here
+			img = ImageIO.read(new File("CivWonderArt/wonderconceptalahambra.png")); //insert real file path here
 		} catch (IOException e) {
 			System.out.println("IO Exception caught.");
 		}

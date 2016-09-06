@@ -19,8 +19,8 @@ public class Art extends Component implements Runnable {
 	
 		
 	public Art(String path, String name) {
-		this.path = path;
-		this.name = name;
+		this.path = path; 
+		this.name = name; //Gives the title of the JFrame
 	}
 	
 	public Component initArt() {
@@ -28,7 +28,7 @@ public class Art extends Component implements Runnable {
 			img = ImageIO.read(new File(path));
 		} catch (IOException e) {
 			e.printStackTrace();
-			img = null;
+			img = null; //If the file path is invalid, return null image.
 		}
 		JLabel artLabel = new JLabel(new ImageIcon(img));
 		return artLabel;
@@ -40,7 +40,7 @@ public class Art extends Component implements Runnable {
 	
 	public Dimension getPreferredSize() {
 		if (img == null) {
-			return new Dimension(100, 100);
+			return new Dimension(100, 100); //Returns a blank 100x100 window if no file can be found.
 		}
 		else {
 			return new Dimension(img.getWidth(null), img.getHeight(null));

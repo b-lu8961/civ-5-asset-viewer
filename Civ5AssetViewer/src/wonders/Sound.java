@@ -1,10 +1,10 @@
 /**
  * The Sound class takes in a file path and uses BasicPlayer 
- * to play the mp3 associated with the file.
+ * to play the audio associated with the file.
  */
 package wonders;
 
-import javazoom.jlgui.basicplayer.BasicPlayer;
+import javazoom.jlgui.basicplayer.BasicPlayer; //BasicPlayer supports playback of mp3 files, which is what was used in the program
 import javazoom.jlgui.basicplayer.BasicPlayerException;
 import java.io.*;
 import java.util.logging.*;
@@ -31,7 +31,7 @@ public class Sound {
 	}
 	
 	public static void main(String[] args) { //Test of the sound class
-		Sound test = new Sound("sound path");
+		Sound test = new Sound("CivWonderMusic/alhambra.mp3");
 		test.run();
-	} 
+	}
 }
